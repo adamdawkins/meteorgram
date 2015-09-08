@@ -1,29 +1,46 @@
 <template name="DefaultLayout">
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">App name</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      {{#if currentUser}}
-        <p class="navbar-text">
-          Signed in | <a href="#!" id="logout">logout</a>
-        </p>
-      {{else}}
-        <li>
-          <a href="/sign-in">Sign In / Register </a>
-        </li>
-      {{/if}}
-    </ul>
-  </div>
-</nav>
-
-{{>yield}}
+  {{#ionBody}}
+    {{> ionNavBar}}
+    {{#ionNavView}}
+      {{> yield}}
+    {{/ionNavView}}
+  {{/ionBody}}
+  {{#ionTabs style="ios"}}
+    {{> ionTab 
+        title="Home" 
+        path="home" 
+        iconOff="ios-home-outline" 
+        iconOn="ios-home"
+        class="tab-item-positive"
+    }}
+    {{> ionTab 
+        title="Search" 
+        path="search" 
+        iconOff="ios-search-strong" 
+        iconOn="ios-search"
+        class="tab-item-positive"
+    }}
+    {{> ionTab 
+        title="Photo" 
+        path="photo" 
+        iconOff="ios-camera-outline" 
+        iconOn="ios-camera"
+        class="tab-item-positive"
+    }}
+    {{> ionTab 
+        title="Activity" 
+        path="activity" 
+        iconOff="ios-heart-outline" 
+        iconOn="ios-heart"
+        class="tab-item-positive"
+    }}
+    {{> ionTab 
+        title="Profile" 
+        path="profile" 
+        iconOff="ios-person-outline" 
+        iconOn="ios-person"
+        class="tab-item-positive"
+    }}
+  {{/ionTabs}}
 
 </template>
