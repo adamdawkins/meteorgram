@@ -1,0 +1,28 @@
+<template name="newPost">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">New Post</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+    <div class="list card">
+
+      <div class="item item-avatar">
+         <img src="chicken.jpg" alt="" />
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
+      </div>
+
+      <div class="item item-image">
+        <img src="chicken.jpg" />
+      </div>
+      <form>
+        <div class="item item-input">
+          <textarea placeholder="Description"></textarea>
+        </div> 
+        <div class="item"><button class="button button-block button-positive">Save post</button></div>
+      </form>
+    </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>

@@ -12,7 +12,6 @@ underscore
 accounts-password
 useraccounts:ionic
 iron:router
-sacha:autorouter
 anti:fake
 fourseven:scss
 meteoric:ionic-sass
